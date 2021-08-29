@@ -32,6 +32,9 @@ Example composer.json:
     "preferred-install": "source"
   },
   "extra": {
+	"patchLevel": {
+	  "drupal/core": "-p2"
+	},
     "patches": {
       "drupal/core": {
         "Add startup configuration for PHP server": "https://www.drupal.org/files/issues/add_a_startup-1543858-30.patch"
@@ -124,6 +127,11 @@ There may be situations in which you want to ignore a patch supplied by a depend
   }
 }
 ```
+
+## Forcing a patch level
+
+In some situations you want to specify the patchLevel so that things don't go wrong.
+TODO see https://github.com/cweagans/composer-patches/issues/230
 
 ## Using patches from HTTP URLs
 
